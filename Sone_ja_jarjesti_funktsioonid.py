@@ -1,49 +1,70 @@
 while True:
-    print("Men��:")
-    print("1.�tletere")
-    print("2.Teeliitmist")
-    print("3.Teearitust")
-    print("4.Teemitmist")
-    print("5.Teedivideerimist")
-    print("6.Teemoodul")
-    print("7.Sisestaandmed")
-    print("8.Kuvak�ik")
-    print("9.V�ljumine")
-    print("10.Lisa")
+    print("Menüü:")
+    print("1.len()funktsiooni näide")
+    print("2.append()funktsiooni näide")
+    print("3.remove()funktsiooni näide")
+    print("4.split()funktsiooni näide")
+    print("5.join()funktsiooni näide")
+    print("6.find()funktsiooni näide")
+    print("7.sort()funktsiooni näide")
+    print("8.reverse()funktsiooni näide")
+    print("9.isdigit()funktsiooni näide")
+    print("10.isalpha()funktsiooni näide")
+    print("0.Väljumine")
     
-    valik=input("Valivalik(1,2v�i10):")
+    valik=input("Sisesta funktsiooni number:")
     
-    if valik=='1':
-        print("Tere!")
-    elif valik=='2':
-        num1=int(input("Sisestaesimennumber:"))
-        num2=int(input("Sisestateinenumber:"))
-        print(f"Liitmistulemus:{num1+num2}")
-    elif valik=='3':
-        num1=int(input("Sisestaesimennumber:"))
-        num2=int(input("Sisestateinenumber:"))
-        print(f"Arvutustulemus:{num1*num2}")
-    elif valik=='4':
-        num1=int(input("Sisestaesimennumber:"))
-        num2=int(input("Sisestateinenumber:"))
-        print(f"Miinustulemus:{num1-num2}")
-    elif valik=='5':
-        num1=int(input("Sisestaesimennumber:"))
-        num2=int(input("Sisestateinenumber:"))
-        print(f"Jagamistulemus:{num1/num2}")
-    elif valik=='6':
-        num1=int(input("Sisestaesimennumber:"))
-        num2=int(input("Sisestateinenumber:"))
-        print(f"Modulitulemus:{num1%num2}")
-    elif valik=='7':
-        andmed=input("Sisestageandmed:")
-        print(f"Sisestatudandmed:{andmed}")
-    elif valik=='8':
-        print("Kuvak�ik!")
-    elif valik=='9':
-        print("Programmistv�ljumine...")
+    if valik=="1":
+        näidis_list=[1,2,3,4,5]
+        print(f"Listi pikkus:{len(näidis_list)}")
+    
+    elif valik=="2":
+        näidis_list=[1,2,3]
+        näidis_list.append(4)
+        print(f"List pärast append:{näidis_list}")
+    
+    elif valik=="3":
+        näidis_list=[1,2,3,4,5]
+        näidis_list.remove(3)
+        print(f"List pärast remove:{näidis_list}")
+    
+    elif valik=="4":
+        näidis_string="apple,orange,banana"
+        tulemus=näidis_string.split(",")
+        print(f"Tulemus split:{tulemus}")
+    
+    elif valik=="5":
+        näidis_list=["apple","orange","banana"]
+        tulemus=", ".join(näidis_list)
+        print(f"Tulemus join:{tulemus}")
+    
+    elif valik=="6":
+        näidis_string="Hello, world!"
+        indeks=näidis_string.find("world")
+        print(f"Alamstringi 'world' indeks:{indeks}")
+    
+    elif valik=="7":
+        näidis_list=[5,1,4,3,2]
+        näidis_list.sort()
+        print(f"List pärast sort:{näidis_list}")
+    
+    elif valik=="8":
+        näidis_list=[1,2,3,4,5]
+        näidis_list.reverse()
+        print(f"List pärast reverse:{näidis_list}")
+    
+    elif valik=="9":
+        näidis_string="12345"
+        tulemus=näidis_string.isdigit()
+        print(f"Kas string on number?{tulemus}")
+    
+    elif valik=="10":
+        näidis_string="Hello"
+        tulemus=näidis_string.isalpha()
+        print(f"Kas string koosneb ainult tähtedest?{tulemus}")
+    
+    elif valik=="0":
+        print("Programmist väljumine.")
         break
-    elif valik=='10':
-        print("Lisa lisa!")
     else:
-        print("Valevalik.Palunvalige1,2v�i10.")
+        print("Vale valik.Proovi uuesti.")
